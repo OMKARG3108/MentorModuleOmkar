@@ -1,0 +1,85 @@
+<h1 class="head">Employee Form</h1>
+
+<div class="bd-example">
+  <div class="employee">
+    <span id="Emp">Employee</span>
+  </div>
+  <form #empform="ngForm">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <label>Employee ID :</label>
+        </div>
+        <div class="col-md-6">
+          <input type="text" name="id" class="form-control" ngModel required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label>Name :</label>
+        </div>
+        <div class="col-md-6">
+          <input type="text" name="name" class="form-control" ngModel required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label>Team :</label>
+        </div>
+        <div class="col-md-6">
+          <input type="text" name="team" class="form-control" ngModel required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label>Designation :</label>
+        </div>
+        <div class="col-md-6">
+          <select class="form-control" name="desig" ngModel required>
+            <option>Tester</option>
+            <option>Developer</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label>Gender :</label>
+        </div>
+        <div class="col-md-6">
+          <div class="form-check-inline">
+            <input class="form-check-input" value="male" name="gender" type="radio" id="flexRadioDefault1" ngModel
+              required>
+            <label class="form-check-label" for="flexRadioDefault1">
+              Male
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <input class="form-check-input radio-left-margin" name="gender" value="Female" type="radio"
+              id="flexRadioDefault1" ngModel required>
+            <label class="form-check-label" for="flexRadioDefault1">
+              Female
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label>Joining Date :</label>
+        </div>
+        <div class="col-md-6">
+          <input type="text"
+            placeholder="DD-MM-YYYY"
+            class="form-control"
+            name="join_date"
+            bsDatepicker
+            ngModel required>
+        </div>
+      </div>
+      <br>
+      <div class="text-right">  
+          <button type="submit" [disabled] = !empform.valid class="btn btn-primary" (click)="add_emp(empform)">Submit</button>
+      </div>
+
+    </div>
+  </form>
+</div>

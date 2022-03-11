@@ -1,0 +1,12 @@
+.dir{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 2px 10px;
+}
+.main{
+    padding: 1%;
+}
+.btnnew{
+    height: 40px !important;
+}
